@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <meta name="description" content="Tarayıcı tabanlı yerel görsel dönüştürme ve düzenleme stüdyosu.">
+  <meta name="theme-color" content="#0b0d12">
+  <title>PixelForge Studio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/studio.css">
+</head>
+<body class="studio-body">
+  <div class="studio-shell">
+    <header class="studio-topbar">
+      <a class="studio-brand" href="index.html" aria-label="Ana sayfaya dön">
+        <span class="brand-mark"><i></i><i></i><i></i></span>
+        <span>PixelForge</span>
+        <small>Studio</small>
+      </a>
+      <div class="topbar-center">
+        <button class="icon-button" id="undoButton" type="button" title="Geri al (Ctrl+Z)" disabled>↶</button>
+        <button class="icon-button" id="redoButton" type="button" title="Yinele (Ctrl+Y)" disabled>↷</button>
+        <span class="toolbar-separator"></span>
+        <button class="text-button" id="resetButton" type="button" disabled>Sıfırla</button>
+      </div>
+      <div class="topbar-actions">
+        <span class="local-badge"><i></i> Yerel işleme</span>
+        <button class="icon-button" data-theme-toggle type="button" aria-label="Temayı değiştir">◐</button>
+        <button class="export-top-button" id="exportTopButton" type="button" disabled>İndir <span>↓</span></button>
+      </div>
+    </header>
+
+    <aside class="tool-sidebar" aria-label="Araçlar">
+      <div class="tool-sidebar-scroll">
+        <button class="tool-nav active" data-tool="convert" type="button"><span>↔</span><small>Dönüştür</small></button>
+        <button class="tool-nav" data-tool="compress" type="button"><span>⌁</span><small>Sıkıştır</small></button>
+        <button class="tool-nav" data-tool="resize" type="button"><span>↗</span><small>Boyut</small></button>
+        <button class="tool-nav" data-tool="crop" type="button"><span>⌗</span><small>Kırp</small></button>
+        <button class="tool-nav" data-tool="rotate" type="button"><span>↻</span><small>Döndür</small></button>
+        <button class="tool-nav" data-tool="effects" type="button"><span>✦</span><small>Efekt</small></button>
+        <button class="tool-nav" data-tool="watermark" type="button"><span>W</span><small>Filigran</small></button>
+        <button class="tool-nav" data-tool="social" type="button"><span>▦</span><small>Sosyal</small></button>
+        <button class="tool-nav" data-tool="favicon" type="button"><span>◆</span><small>Favicon</small></button>
+        <button class="tool-nav" data-tool="palette" type="button"><span>◉</span><small>Renk</small></button>
+      </div>
+      <a class="sidebar-help" href="about.html" title="Yardım">?</a>
+    </aside>
+
+    <main class="workspace">
+      <div class="workspace-toolbar">
+        <div class="file-meta" id="fileMeta">
+          <span class="file-meta-empty">Henüz görsel seçilmedi</span>
+        </div>
+        <div class="view-actions">
+          <button class="view-button active" id="afterView" type="button">Sonuç</button>
+          <button class="view-button" id="beforeView" type="button" disabled>Orijinal</button>
+          <span class="toolbar-separator"></span>
+          <button class="icon-button compact" id="zoomOut" type="button" disabled>−</button>
+          <button class="zoom-value" id="zoomValue" type="button" disabled>Fit</button>
+          <button class="icon-button compact" id="zoomIn" type="button" disabled>+</button>
+        </div>
+      </div>
+
+      <section class="canvas-area" id="canvasArea">
+        <div class="empty-state" id="emptyState">
+          <div class="drop-visual">
+            <div class="drop-layer layer-back"></div>
+            <div class="drop-layer layer-mid"></div>
+            <div class="drop-layer layer-front"><span>↑</span></div>
+          </div>
+          <h1>Görselini buraya bırak</h1>
+          <p>JPG, PNG, WebP, SVG, GIF ve tarayıcının desteklediği diğer görsel formatları</p>
+          <div class="empty-actions">
+            <button class="primary-action" id="browseButton" type="button">Dosya seç</button>
+            <button class="secondary-action" id="pasteButton" type="button">Panodan yapıştır</button>
+          </div>
+          <small>Dosyan cihazından çıkmaz · Maksimum boyut tarayıcı belleğine bağlıdır</small>
+        </div>
+
+        <div class="preview-stage hidden" id="previewStage">
+          <div class="canvas-checker" id="canvasChecker">
+            <canvas id="previewCanvas" aria-label="Görsel önizlemesi"></canvas>
+            <div class="pixel-picker" id="pixelPicker" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="drop-overlay" id="dropOverlay">
+          <div><span>＋</span><b>Görseli buraya bırak</b><small>Mevcut görsel değiştirilecek</small></div>
+        </div>
+      </section>
+
+      <div class="workspace-status">
+        <span id="statusDimensions">—</span>
+        <span id="statusFormat">—</span>
+        <span id="statusSize">—</span>
+        <span class="status-spacer"></span>
+        <span id="renderStatus"><i></i> Hazır</span>
+      </div>
+    </main>
+
+    <aside class="settings-panel">
+      <div class="settings-head">
+        <div><span class="settings-kicker">Aktif araç</span><h2 id="panelTitle">Format Dönüştür</h2></div>
+        <button class="icon-button compact mobile-close" id="mobileClosePanel" type="button">×</button>
+      </div>
+      <div class="settings-scroll" id="settingsContent"></div>
+      <div class="export-dock" id="exportDock">
+        <div class="export-summary">
+          <div><span>Çıktı</span><b id="exportSummary">PNG · —</b></div>
+          <span class="size-saving" id="sizeSaving"></span>
+        </div>
+        <button class="download-button" id="downloadButton" type="button" disabled>
+          <span>Görseli indir</span><small id="downloadHint">Önce bir görsel seç</small>
+          <b>↓</b>
+        </button>
+      </div>
+    </aside>
+
+    <button class="mobile-tools-button" id="mobileToolsButton" type="button">Araçlar <span>⌃</span></button>
+  </div>
+  <input id="fileInput" type="file" accept="image/*,.svg" hidden>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <div class="modal-backdrop hidden" id="exportModal" role="dialog" aria-modal="true" aria-labelledby="exportModalTitle">
+    <div class="export-modal-card">
+      <button class="modal-close" id="closeExportModal" type="button">×</button>
+      <span class="modal-kicker">Dışa aktar</span>
+      <h2 id="exportModalTitle">Görselin hazır</h2>
+      <div class="export-preview"><canvas id="exportPreviewCanvas"></canvas></div>
+      <div class="export-modal-info">
+        <div><span>Dosya adı</span><input id="exportFilename" type="text" value="pixelforge-output"></div>
+        <div class="export-stats"><span id="modalDimensions">—</span><span id="modalFormat">—</span><span id="modalSize">—</span></div>
+      </div>
+      <button class="modal-download" id="confirmDownload" type="button">Cihazına indir <span>↓</span></button>
+      <small class="modal-privacy">İndirme doğrudan tarayıcından gerçekleşir.</small>
+    </div>
+  </div>
+  <script src="assets/js/studio.bundle.js" defer></script>
+</body>
+</html>

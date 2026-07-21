@@ -1,0 +1,11 @@
+PIXELFORGE - CIFT TIKLAMALI SURUM
+================================
+
+1. ZIP dosyasini bir klasore cikarin.
+2. PIXELFORGE-BASLAT.bat dosyasina cift tiklayin.
+3. Alternatif olarak index.html dosyasini cift tiklayin.
+4. Ana sayfadaki "Studyoyu ac" dugmesine basin.
+5. Gorselinizi surukleyip birakin veya "Dosya sec" dugmesini kullanin.
+
+Gorselleriniz sunucuya yuklenmez. Islemler tarayicinizda gerceklesir.
+En iyi sonuc icin guncel Chrome veya Edge kullanin.

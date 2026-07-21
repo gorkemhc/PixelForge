@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Görsellerinizi cihazınızdan çıkarmadan dönüştürün, sıkıştırın ve düzenleyin.">
+  <meta name="theme-color" content="#0b0d12">
+  <title>PixelForge — Hızlı ve Güvenli Görsel Araçları</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="PixelForge ana sayfa">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>PixelForge</span>
+    </a>
+    <nav class="nav-links" aria-label="Ana menü">
+      <a href="#tools">Araçlar</a>
+      <a href="#privacy">Gizlilik</a>
+      <a href="about.html">Hakkında</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Temayı değiştir" data-theme-toggle>
+        <span class="theme-icon" aria-hidden="true">◐</span>
+      </button>
+      <a class="button button-primary button-sm" href="studio.html">Stüdyoyu aç</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse-dot"></span> %100 tarayıcıda çalışır</div>
+        <h1>Görsellerin için gereken her şey, <span>tek ve sade bir stüdyoda.</span></h1>
+        <p>JPG, PNG ve WebP dönüştürme; sıkıştırma, yeniden boyutlandırma, kırpma, efekt, filigran ve sosyal medya ölçüleri. Dosyaların cihazından çıkmaz.</p>
+        <div class="hero-actions">
+          <a class="button button-primary button-lg" href="studio.html">
+            Görselini düzenle
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a class="button button-ghost button-lg" href="#tools">Araçları keşfet</a>
+        </div>
+        <div class="trust-row" aria-label="Avantajlar">
+          <span><b>0</b> yükleme</span>
+          <span><b>0</b> üyelik</span>
+          <span><b>100%</b> yerel</span>
+        </div>
+      </div>
+
+      <div class="hero-app" aria-label="PixelForge arayüz önizlemesi">
+        <div class="app-window">
+          <div class="window-bar">
+            <span class="window-dots"><i></i><i></i><i></i></span>
+            <span class="window-title">PixelForge Studio</span>
+            <span class="privacy-pill"><i></i> Cihazında işleniyor</span>
+          </div>
+          <div class="app-grid">
+            <aside class="mini-sidebar">
+              <span class="mini-brand"></span>
+              <i class="active"></i><i></i><i></i><i></i><i></i><i></i>
+            </aside>
+            <div class="mini-stage">
+              <div class="mini-toolbar"><span></span><span></span><span></span></div>
+              <div class="mini-canvas">
+                <div class="mini-image">
+                  <div class="mini-orb"></div>
+                  <strong>CREATE<br>WITHOUT<br>LIMITS</strong>
+                </div>
+              </div>
+              <div class="mini-bottom"><span>1920 × 1080</span><span>PNG · 1.8 MB</span></div>
+            </div>
+            <aside class="mini-panel">
+              <b>Dışa aktar</b>
+              <label>Format</label><div class="mini-select">PNG <span>⌄</span></div>
+              <label>Kalite</label><div class="mini-range"><i></i></div>
+              <label>Boyut</label><div class="mini-inputs"><i></i><i></i></div>
+              <button>Görseli indir</button>
+            </aside>
+          </div>
+        </div>
+        <div class="floating-card floating-card-top">
+          <span class="floating-icon">⌁</span>
+          <span><b>Akıllı sıkıştırma</b><small>Kalite kaybını azaltır</small></span>
+        </div>
+        <div class="floating-card floating-card-bottom">
+          <span class="floating-icon">✓</span>
+          <span><b>Dönüştürme tamamlandı</b><small>2.4 MB → 684 KB</small></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="logo-strip" aria-label="Desteklenen formatlar">
+      <span>JPG</span><i></i><span>PNG</span><i></i><span>WEBP</span><i></i><span>SVG</span><i></i><span>AVIF*</span><i></i><span>GIF*</span>
+    </section>
+
+    <section class="section tools-section" id="tools">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">Görsel araç kutusu</span>
+          <h2>İhtiyacın olan işlemi seç.</h2>
+        </div>
+        <p>Her araç tek bir ekranda, gereksiz adım olmadan çalışır. Görselini sürükle, ayarla ve indir.</p>
+      </div>
+      <div class="tool-grid">
+        <a class="tool-card featured" href="studio.html?tool=convert">
+          <span class="tool-icon icon-convert">↔</span>
+          <span class="tool-tag">En popüler</span>
+          <h3>Format Dönüştürücü</h3>
+          <p>JPG, PNG ve WebP arasında saniyeler içinde dönüşüm yap.</p>
+          <span class="tool-link">Aracı aç <b>↗</b></span>
+        </a>
+        <a class="tool-card" href="studio.html?tool=compress">
+          <span class="tool-icon">⌁</span>
+          <h3>Görsel Sıkıştırma</h3>
+          <p>Görüntü kalitesini korurken dosya boyutunu küçült.</p>
+          <span class="tool-link">Aracı aç <b>↗</b></span>
+        </a>
+        <a class="tool-card" href="studio.html?tool=resize">
+          <span class="tool-icon">↗</span>
+          <h3>Yeniden Boyutlandır</h3>
+          <p>Piksel veya hazır ölçülerle boyutu hassas şekilde değiştir.</p>
+          <span class="tool-link">Aracı aç <b>↗</b></span>
+        </a>
+        <a class="tool-card" href="studio.html?tool=crop">
+          <span class="tool-icon">⌗</span>
+          <h3>Kırp ve Döndür</h3>
+          <p>Oran seç, kadrajı kaydır, çevir ve doğru kompozisyonu oluştur.</p>
+          <span class="tool-link">Aracı aç <b>↗</b></span>
+        </a>
+        <a class="tool-card" href="studio.html?tool=effects">
+          <span class="tool-icon">✦</span>
+          <h3>Efekt ve Renk</h3>
+          <p>Parlaklık, kontrast, doygunluk, gri ton, sepya ve blur ayarla.</p>
+          <span class="tool-link">Aracı aç <b>↗</b></span>
+        </a>
+        <a class="tool-card" href="studio.html?tool=watermark">
+          <span class="tool-icon">W</span>
+          <h3>Filigran Ekle</h3>
+          <p>Metin, konum, renk ve opaklık ayarlarıyla markanı koru.</p>
+          <span class="tool-link">Aracı aç <b>↗</b></span>
+        </a>
+        <a class="tool-card" href="studio.html?tool=social">
+          <span class="tool-icon">▦</span>
+          <h3>Sosyal Medya Ölçüleri</h3>
+          <p>Instagram, YouTube, LinkedIn ve X için hazır boyutları kullan.</p>
+          <span class="tool-link">Aracı aç <b>↗</b></span>
+        </a>
+        <a class="tool-card" href="studio.html?tool=palette">
+          <span class="tool-icon">◉</span>
+          <h3>Renk Paleti</h3>
+          <p>Görselden baskın renkleri çıkar ve piksel üzerinden renk seç.</p>
+          <span class="tool-link">Aracı aç <b>↗</b></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section workflow-section">
+      <div class="section-heading centered">
+        <span class="section-kicker">3 adım</span>
+        <h2>Görselini düzenlemek bu kadar kolay.</h2>
+        <p>Hesap açmadan, reklam izlemeden ve dosya yüklemeden.</p>
+      </div>
+      <div class="workflow-grid">
+        <article><span>01</span><div class="workflow-visual upload-visual"><i>↑</i></div><h3>Görselini bırak</h3><p>Dosyayı sürükle, seç veya panodan yapıştır.</p></article>
+        <article><span>02</span><div class="workflow-visual adjust-visual"><i></i><i></i><i></i></div><h3>Ayarlarını yap</h3><p>Canlı önizleme ile sonucu anında gör.</p></article>
+        <article><span>03</span><div class="workflow-visual export-visual"><i>↓</i></div><h3>İndir</h3><p>İstediğin format ve kalitede cihazına kaydet.</p></article>
+      </div>
+    </section>
+
+    <section class="section privacy-section" id="privacy">
+      <div class="privacy-card">
+        <div class="privacy-copy">
+          <span class="section-kicker">Gizlilik varsayılan gelir</span>
+          <h2>Dosyaların hiçbir sunucuya gönderilmez.</h2>
+          <p>PixelForge işlemleri tarayıcının kendi Canvas altyapısıyla cihazında yapar. Görsellerini yüklemez, depolamaz veya analiz için başka bir yere göndermez.</p>
+          <div class="privacy-points">
+            <span><i>✓</i> Yerel işleme</span>
+            <span><i>✓</i> Üyeliksiz kullanım</span>
+            <span><i>✓</i> İz bırakmayan çalışma</span>
+          </div>
+          <a class="text-link" href="privacy.html">Gizlilik yaklaşımını oku →</a>
+        </div>
+        <div class="privacy-visual" aria-hidden="true">
+          <div class="shield"><span>✓</span></div>
+          <div class="data-line line-one"></div>
+          <div class="data-line line-two"></div>
+          <div class="data-line line-three"></div>
+          <span class="device-label">YOUR DEVICE</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="cta-card">
+        <div><span class="section-kicker">Hazır olduğunda</span><h2>İlk görselini şimdi dönüştür.</h2><p>Kurulum yok. Üyelik yok. Sadece görselini seç ve başla.</p></div>
+        <a class="button button-light button-lg" href="studio.html">Stüdyoyu aç <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="index.html"><span class="brand-mark"><i></i><i></i><i></i></span><span>PixelForge</span></a>
+    <p>Görsel işlemenin sade ve gizli yolu.</p>
+    <nav><a href="studio.html">Stüdyo</a><a href="about.html">Hakkında</a><a href="privacy.html">Gizlilik</a></nav>
+    <span>© <span data-year></span> PixelForge</span>
+  </footer>
+  <script src="assets/js/main.bundle.js" defer></script>
+</body>
+</html>
