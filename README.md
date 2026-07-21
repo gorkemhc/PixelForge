@@ -117,7 +117,7 @@ Alternatif olarak `PIXELFORGE-BASLAT.bat` dosyasını çift tıklayabilirsiniz.
 
 GitHub Pages adresi:
 
-**https://gorkemhc.github.io/pixelforge/**
+**https://gorkemhc.github.io/PixelForge/**
 
 GitHub Pages'i etkinleştirmek için:
 
