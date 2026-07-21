@@ -6,7 +6,7 @@
 
 Tarayıcı üzerinde çalışan; görsel dönüştürme, sıkıştırma, yeniden boyutlandırma, kırpma, efekt, filigran ve sosyal medya ölçülendirme araçlarını tek arayüzde birleştiren modern görsel düzenleme platformu.
 
-[![Canlı Demo](https://img.shields.io/badge/Canlı_Demo-7C5CFF?style=for-the-badge&logo=githubpages&logoColor=white)](https://gorkemhc.github.io/pixelforge/)
+[![Canlı Demo](https://img.shields.io/badge/Canlı_Demo-7C5CFF?style=for-the-badge&logo=githubpages&logoColor=white)](https://gorkemhc.github.io/PixelForge/)
 [![Kaynak Kod](https://img.shields.io/badge/Kaynak_Kod-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gorkemhc/pixelforge)
 [![Yerel İşleme](https://img.shields.io/badge/%25100_Yerel_İşleme-22C55E?style=for-the-badge)](https://github.com/gorkemhc/pixelforge)
 
